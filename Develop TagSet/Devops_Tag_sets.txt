@@ -1,0 +1,181 @@
+Significance: 0.005 Relivance: 0.005
+{"docker","ansible","azure-devops","devops","jenkins","tfs","kubernetes","terraform","deployment","dockerfile","chef","continuous-integration","ibm-cloud","bitbucket","gitlab","sonarqube","jenkins-pipeline","cloud","gitlab-ci","puppet","yaml","amazon-cloudformation","salt-stack","containers","digital-ocean","docker-compose","artifactory","pipeline","azure-pipelines","jenkins-plugins","kubernetes-helm","google-kubernetes-engine","continuous-deployment","azure-devops-rest-api","devops-services","chef-recipe","azure-pipelines-release-pipeline","amazon-ecs","continuous-delivery","gitlab-ci-runner","jenkins-groovy","docker-swarm",}
+Tag set T contains 42 tags
+StackOverflow contains 381675 questions with tags in T
+
+
+Significance: 0.005 Relivance: 0.010
+{"docker","ansible","azure-devops","devops","jenkins","tfs","kubernetes","terraform","deployment","dockerfile","chef","continuous-integration","ibm-cloud","gitlab","sonarqube","jenkins-pipeline","cloud","gitlab-ci","puppet","yaml","amazon-cloudformation","containers","docker-compose","pipeline","azure-pipelines","jenkins-plugins","continuous-deployment","devops-services",}
+Tag set T contains 28 tags
+StackOverflow contains 350678 questions with tags in T
+
+
+Significance: 0.005 Relivance: 0.015
+{"docker","ansible","azure-devops","devops","jenkins","tfs","kubernetes","terraform","deployment","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","gitlab-ci","containers","docker-compose","azure-pipelines","continuous-deployment",}
+Tag set T contains 19 tags
+StackOverflow contains 299125 questions with tags in T
+
+
+Significance: 0.005 Relivance: 0.020
+{"docker","ansible","azure-devops","devops","jenkins","tfs","kubernetes","terraform","deployment","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","docker-compose","azure-pipelines","continuous-deployment",}
+Tag set T contains 17 tags
+StackOverflow contains 288032 questions with tags in T
+
+
+Significance: 0.005 Relivance: 0.025
+{"docker","ansible","azure-devops","devops","jenkins","tfs","kubernetes","terraform","deployment","continuous-integration","ibm-cloud","jenkins-pipeline","docker-compose","azure-pipelines",}
+Tag set T contains 14 tags
+StackOverflow contains 270315 questions with tags in T
+
+
+Significance: 0.005 Relivance: 0.030
+{"docker","ansible","azure-devops","devops","jenkins","kubernetes","terraform","continuous-integration","ibm-cloud","jenkins-pipeline",}
+Tag set T contains 10 tags
+StackOverflow contains 208926 questions with tags in T
+
+
+Significance: 0.008 Relivance: 0.005
+{"ansible","azure-devops","devops","jenkins","kubernetes","terraform","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","gitlab-ci","puppet","amazon-cloudformation","salt-stack","artifactory","pipeline","azure-pipelines","jenkins-plugins","kubernetes-helm","continuous-deployment","azure-devops-rest-api","devops-services","chef-recipe","azure-pipelines-release-pipeline","amazon-ecs","continuous-delivery","gitlab-ci-runner","jenkins-groovy","docker-swarm",}
+Tag set T contains 30 tags
+StackOverflow contains 192525 questions with tags in T
+
+
+Significance: 0.008 Relivance: 0.010
+{"ansible","azure-devops","devops","jenkins","kubernetes","terraform","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","gitlab-ci","puppet","amazon-cloudformation","pipeline","azure-pipelines","jenkins-plugins","continuous-deployment","devops-services",}
+Tag set T contains 19 tags
+StackOverflow contains 174693 questions with tags in T
+
+
+Significance: 0.008 Relivance: 0.015
+{"ansible","azure-devops","devops","jenkins","kubernetes","terraform","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","gitlab-ci","azure-pipelines","continuous-deployment",}
+Tag set T contains 14 tags
+StackOverflow contains 157123 questions with tags in T
+
+
+Significance: 0.008 Relivance: 0.020
+{"ansible","azure-devops","devops","jenkins","kubernetes","terraform","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","azure-pipelines","continuous-deployment",}
+Tag set T contains 13 tags
+StackOverflow contains 153618 questions with tags in T
+
+
+Significance: 0.008 Relivance: 0.025
+{"ansible","azure-devops","devops","jenkins","kubernetes","terraform","continuous-integration","ibm-cloud","jenkins-pipeline","azure-pipelines",}
+Tag set T contains 10 tags
+StackOverflow contains 135901 questions with tags in T
+
+
+Significance: 0.008 Relivance: 0.030
+{"ansible","azure-devops","devops","jenkins","kubernetes","terraform","continuous-integration","ibm-cloud","jenkins-pipeline",}
+Tag set T contains 9 tags
+StackOverflow contains 131488 questions with tags in T
+
+
+Significance: 0.01 Relivance: 0.005
+{"ansible","azure-devops","devops","jenkins","terraform","chef","continuous-integration","ibm-cloud","jenkins-pipeline","gitlab-ci","puppet","salt-stack","artifactory","pipeline","azure-pipelines","continuous-deployment","azure-devops-rest-api","devops-services","chef-recipe","azure-pipelines-release-pipeline","amazon-ecs","continuous-delivery","gitlab-ci-runner","jenkins-groovy",}
+Tag set T contains 24 tags
+StackOverflow contains 139981 questions with tags in T
+
+
+Significance: 0.01 Relivance: 0.010
+{"ansible","azure-devops","devops","jenkins","terraform","chef","continuous-integration","ibm-cloud","jenkins-pipeline","gitlab-ci","puppet","pipeline","azure-pipelines","continuous-deployment","devops-services",}
+Tag set T contains 15 tags
+StackOverflow contains 126853 questions with tags in T
+
+
+Significance: 0.01 Relivance: 0.015
+{"ansible","azure-devops","devops","jenkins","terraform","chef","continuous-integration","ibm-cloud","jenkins-pipeline","gitlab-ci","azure-pipelines","continuous-deployment",}
+Tag set T contains 12 tags
+StackOverflow contains 120055 questions with tags in T
+
+
+Significance: 0.01 Relivance: 0.020
+{"ansible","azure-devops","devops","jenkins","terraform","chef","continuous-integration","ibm-cloud","jenkins-pipeline","azure-pipelines","continuous-deployment",}
+Tag set T contains 11 tags
+StackOverflow contains 116550 questions with tags in T
+
+
+Significance: 0.01 Relivance: 0.025
+{"ansible","azure-devops","devops","jenkins","terraform","continuous-integration","ibm-cloud","jenkins-pipeline","azure-pipelines",}
+Tag set T contains 9 tags
+StackOverflow contains 108363 questions with tags in T
+
+
+Significance: 0.01 Relivance: 0.030
+{"ansible","azure-devops","devops","jenkins","terraform","continuous-integration","ibm-cloud","jenkins-pipeline",}
+Tag set T contains 8 tags
+StackOverflow contains 103950 questions with tags in T
+
+
+Significance: 0.02 Relivance: 0.005
+{"azure-devops","devops","terraform","continuous-integration","ibm-cloud","azure-pipelines","continuous-deployment","azure-devops-rest-api","devops-services","continuous-delivery","jenkins-groovy",}
+Tag set T contains 11 tags
+StackOverflow contains 49800 questions with tags in T
+
+
+Significance: 0.02 Relivance: 0.010
+{"azure-devops","devops","terraform","continuous-integration","ibm-cloud","azure-pipelines","continuous-deployment","devops-services",}
+Tag set T contains 8 tags
+StackOverflow contains 47255 questions with tags in T
+
+
+Significance: 0.02 Relivance: 0.015
+{"azure-devops","devops","terraform","continuous-integration","ibm-cloud","azure-pipelines","continuous-deployment",}
+Tag set T contains 7 tags
+StackOverflow contains 47133 questions with tags in T
+
+
+Significance: 0.02 Relivance: 0.020
+{"azure-devops","devops","terraform","continuous-integration","ibm-cloud","azure-pipelines","continuous-deployment",}
+Tag set T contains 7 tags
+StackOverflow contains 47133 questions with tags in T
+
+
+Significance: 0.02 Relivance: 0.025
+{"azure-devops","devops","terraform","continuous-integration","ibm-cloud","azure-pipelines",}
+Tag set T contains 6 tags
+StackOverflow contains 45145 questions with tags in T
+
+
+Significance: 0.02 Relivance: 0.030
+{"azure-devops","devops","terraform","continuous-integration","ibm-cloud",}
+Tag set T contains 5 tags
+StackOverflow contains 40732 questions with tags in T
+
+
+Significance: 0.03 Relivance: 0.005
+{"devops","continuous-deployment","devops-services","continuous-delivery",}
+Tag set T contains 4 tags
+StackOverflow contains 6238 questions with tags in T
+
+
+Significance: 0.03 Relivance: 0.010
+{"devops","continuous-deployment","devops-services",}
+Tag set T contains 3 tags
+StackOverflow contains 5782 questions with tags in T
+
+
+Significance: 0.03 Relivance: 0.015
+{"devops","continuous-deployment",}
+Tag set T contains 2 tags
+StackOverflow contains 5660 questions with tags in T
+
+
+Significance: 0.05 Relivance: 0.005
+{"devops","devops-services","continuous-delivery",}
+Tag set T contains 3 tags
+StackOverflow contains 4250 questions with tags in T
+
+
+Significance: 0.05 Relivance: 0.010
+{"devops","devops-services",}
+Tag set T contains 2 tags
+StackOverflow contains 3794 questions with tags in T
+
+
+===================================================================================================
+@@ We select tags set where significance and relevance values corresponding .01 and 0.010 
+===================================================================================================
+Significance: 0.01 Relivance: 0.010
+{"ansible","azure-devops","devops","jenkins","terraform","chef","continuous-integration","ibm-cloud","jenkins-pipeline","gitlab-ci","puppet","pipeline","azure-pipelines","continuous-deployment","devops-services",}
+Tag set T contains 15 tags
+StackOverflow contains 126853 questions with tags in T

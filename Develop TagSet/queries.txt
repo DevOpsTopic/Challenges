@@ -1,0 +1,158 @@
+
+========== Candidate Tags Selection ================
+select left(REPLACE((REPLACE(tags,'>',',')),'<',''),len(REPLACE((REPLACE(tags,'>',',')),'<',''))-1) as tags  
+	from postsnew
+	where tags like '%<devops>%';
+
+
+================= Post A value calculation ========
+
+DECLARE @tags VARCHAR(128);
+--DECLARE @tcount VARCHAR(128);
+
+-- declare cursor
+DECLARE cursor_tags_count CURSOR FOR
+SELECT tags_name as tags
+  FROM candidate_tag$;
+
+-- open cursor
+
+OPEN cursor_tags_count;
+
+-- loop through a cursor
+
+FETCH NEXT FROM cursor_tags_count INTO @tags;	
+------------
+WHILE @@FETCH_STATUS = 0
+	BEGIN
+	DECLARE @tcount VARCHAR(128); 
+	SET @tcount=(SELECT count(*) as tcount
+	    FROM postsnew where tags like '%<'+@tags+'>%'
+		and tags like '%<devops>%');
+		PRINT CONCAT(@tags,',',@tcount);
+    FETCH NEXT FROM cursor_tags_count INTO @tags;
+	END;
+-- close and deallocate cursor
+
+CLOSE cursor_tags_count;
+DEALLOCATE cursor_tags_count;
+
+
+==================== Post B value calculation =============
+DECLARE @tags VARCHAR(128);
+--DECLARE @tcount VARCHAR(128);
+
+-- declare cursor
+DECLARE cursor_tags_count CURSOR FOR
+SELECT tags_name as tags
+  FROM candidate_tag$;
+
+-- open cursor
+
+OPEN cursor_tags_count;
+
+-- loop through a cursor
+
+FETCH NEXT FROM cursor_tags_count INTO @tags;	
+------------
+WHILE @@FETCH_STATUS = 0
+	BEGIN
+	DECLARE @tcount VARCHAR(128); 
+	SET @tcount=(SELECT count(*) as tcount
+	    FROM posts where tags like '%<'+@tags+'>%');
+		PRINT CONCAT(@tags,',',@tcount);
+    FETCH NEXT FROM cursor_tags_count INTO @tags;
+	END;
+-- close and deallocate cursor
+
+CLOSE cursor_tags_count;
+DEALLOCATE cursor_tags_count;
+
+
+
+==================== Post C Number Generate =============
+SELECT count(*) as tcount
+	    FROM posts where tags like '%<devops>%'
+
+
+====================== Threshold values with tags ==============
+DECLARE 
+    @columns NVARCHAR(MAX) = '', 
+    @sql     NVARCHAR(MAX) = '';
+
+-- select the category names
+SELECT 
+    @columns+=QUOTENAME(category_name) + ','
+FROM 
+    production.categories
+ORDER BY 
+    category_name;
+
+-- remove the last comma
+SET @columns = LEFT(@columns, LEN(@columns) - 1);
+
+-- construct dynamic SQL
+SET @sql ='
+SELECT * FROM   
+(
+    SELECT 
+        category_name, 
+        model_year,
+        product_id 
+    FROM 
+        production.products p
+        INNER JOIN production.categories c 
+            ON c.category_id = p.category_id
+) t 
+PIVOT(
+    COUNT(product_id) 
+    FOR category_name IN ('+ @columns +')
+) AS pivot_table;';
+
+-- execute the dynamic SQL
+EXECUTE sp_executesql @sql;
+
+
+=========================== Tag Set Construction ===============================
+DECLARE 
+    @columns NVARCHAR(MAX) = '', 
+    @significance   VARCHAR(10),
+	@relivance		VARCHAR(10),
+	@R INT,
+	@count VARCHAR(5);
+
+	SET @significance=.005;
+	SET @relivance =.005;
+	SET @R=1;
+
+-- select the category names
+while(@R<=6)
+BEGIN
+	SELECT 
+	@columns+='"'+tagname+'"' + ','
+	FROM 
+    tag_set$
+	where significance>=@significance and relevance>=@relivance;
+
+	DECLARE
+	@Totalpost varchar(30);
+	set @Totalpost=(SELECT 
+    sum(b_value) as tcount
+	FROM 
+    tag_set$
+	where significance>=@significance and relevance>=@relivance);
+
+	set @count=(SELECT 
+    count(b_value) as tcount
+	FROM 
+    tag_set$
+	where significance>=@significance and relevance>=@relivance);
+	
+	print('Significance: '+@significance +' Relivance: '+@relivance+''+char(13)+'{'+@columns+'}'+char(13)+
+	'Tag set T contains '+@count+' tags'+char(13)+
+	'StackOverflow contains '+@Totalpost +' questions with tags in T'+char(13)+''+char(13));
+
+	SET @relivance = @relivance + .005
+	SET @R  = @R  + 1
+	--PRINT 'The counter value is = ' + CONVERT(VARCHAR,@R)
+	END;

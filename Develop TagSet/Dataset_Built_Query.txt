@@ -1,0 +1,59 @@
+	  DECLARE @tags VARCHAR(128);
+Declare @T_variable table([Id] varchar(20)
+    --  ,[AcceptedAnswerId] varchar(20)
+      ,[AnswerCount] varchar(20)
+      ,[Body] varchar(max)
+      --,[ClosedDate] varchar(20)
+      ,[CommentCount] varchar(20)
+      --,[CommunityOwnedDate] varchar(20)
+      ,[CreationDate] varchar(20)
+      ,[FavoriteCount] varchar(20)
+      --,[LastActivityDate] varchar(20)
+      --,[LastEditDate] varchar(20) 
+      --,[LastEditorDisplayName] varchar(20)
+      --,[LastEditorUserId] varchar(20)
+      --,[OwnerUserId] varchar(20)
+      --,[ParentId] varchar(20)
+      ,[PostTypeId] varchar(20)
+      ,[Score] varchar(20)
+      ,[Tags] varchar(max)
+      ,[Title] varchar(max)
+      ,[ViewCount] varchar(20)) 
+--DECLARE @tcount VARCHAR(128); 
+
+-- declare cursor
+
+DECLARE cursor_tags_count CURSOR FOR
+SELECT tagsname as tags
+  FROM final_tag$;
+
+-- open cursor
+OPEN cursor_tags_count;
+
+-- loop through a cursor
+FETCH NEXT FROM cursor_tags_count INTO @tags;         
+------------
+WHILE @@FETCH_STATUS = 0
+                BEGIN
+   insert into @T_variable
+                SELECT 
+				Id
+	  ,AnswerCount
+      ,Body
+      ,CommentCount 
+      ,CreationDate 
+      ,FavoriteCount 
+      ,PostTypeId 
+      ,Score 
+      ,Tags 
+      ,Title
+      ,ViewCount
+                    FROM posts where tags like '%<'+@tags+'>%'     
+    FETCH NEXT FROM cursor_tags_count INTO @tags;
+                END;
+
+-- close and deallocate cursor
+CLOSE cursor_tags_count;
+DEALLOCATE cursor_tags_count;
+
+select * from @T_variable

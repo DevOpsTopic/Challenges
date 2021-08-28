@@ -1,0 +1,70 @@
+	  DECLARE @tags VARCHAR(128);
+Declare @T_variable table([Id] varchar(20)
+    --  ,[AcceptedAnswerId] varchar(20)
+      ,[AnswerCount] varchar(20)
+      ,[Body] varchar(max)
+      --,[ClosedDate] varchar(20)
+      ,[CommentCount] varchar(20)
+      --,[CommunityOwnedDate] varchar(20)
+      ,[CreationDate] varchar(20)
+      ,[FavoriteCount] varchar(20)
+      --,[LastActivityDate] varchar(20)
+      --,[LastEditDate] varchar(20) 
+      --,[LastEditorDisplayName] varchar(20)
+      --,[LastEditorUserId] varchar(20)
+      --,[OwnerUserId] varchar(20)
+      --,[ParentId] varchar(20)
+      ,[PostTypeId] varchar(20)
+      ,[Score] varchar(20)
+      ,[Tags] varchar(max)
+      ,[Title] varchar(max)
+      ,[ViewCount] varchar(20)
+	  ,[AcceptedAnsCount] varchar(10)
+	  ,[answerdelay] varchar(20))
+--DECLARE @tcount VARCHAR(128); 
+
+-- declare cursor
+
+DECLARE cursor_tags_count CURSOR FOR
+SELECT  tagsname as tags
+  FROM final_tag$ where tagsname in 
+ ('ansible','azure-devops','devops','jenkins','kubernetes','terraform','chef','continuous-integration','ibm-cloud','gitlab','jenkins-pipeline','gitlab-ci','puppet','amazon-cloudformation','pipeline','azure-pipelines','jenkins-plugins','continuous-deployment','devops-services')
+
+-- open cursor
+OPEN cursor_tags_count;
+
+-- loop through a cursor
+FETCH NEXT FROM cursor_tags_count INTO @tags;         
+------------
+WHILE @@FETCH_STATUS = 0
+                BEGIN
+   insert into @T_variable              					
+					select p.id,
+					p.answercount
+					,p.body
+					,p.commentcount
+					,p.CreationDate 
+      ,p.FavoriteCount 
+      ,p.PostTypeId 
+      ,p.Score 
+      ,p.Tags 
+      ,p.Title
+      ,p.ViewCount
+,case
+when p.acceptedanswerid=0
+then 0
+else 1
+end as acceptedanscount
+,DATEDIFF(hour,p.creationdate,s.creationdate) as answerdelay
+from
+(select * from posts where posttypeid=1 and tags like '%<'+@tags+'>%'  )p
+left join (select id,creationdate,acceptedanswerid,lastactivitydate from posts where posttypeid=2 and id in (select AcceptedAnswerId from posts where AcceptedAnswerId<>0 and PostTypeId=1 and Tags like '%<'+@tags+'>%') ) s
+on p.acceptedanswerid=s.id
+    FETCH NEXT FROM cursor_tags_count INTO @tags;
+                END;
+
+-- close and deallocate cursor
+CLOSE cursor_tags_count;
+DEALLOCATE cursor_tags_count;
+
+select * from @T_variable
