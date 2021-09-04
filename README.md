@@ -1,1 +1,1 @@
-# Topics of DevOps Challenges in Developer Discussion
+# Topics of DevOps Challenges in Developer Discussions
