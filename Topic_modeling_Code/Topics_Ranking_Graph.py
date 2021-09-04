@@ -26,10 +26,10 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 import pandas as pd
 import numpy as np
 
-reviews_datasets = pd.read_csv("F:\\BUET\\Project\\Code\\Dataset\\Newfolder\\dataset_final_260321.csv",encoding="utf8")
+reviews_datasets = pd.read_csv(""F:\\Project\\DevOps_Dataset.csv"",encoding="utf8")
 #reviews_datasets = reviews_datasets.head(30)
 reviews_datasets.dropna()
-obody = reviews_datasets['Body']
+obody = reviews_datasets['title']
 
 reviews_datasets.head()
 #print(obody)
@@ -66,7 +66,7 @@ stop_words = set(stopwords.words('english'))
 import re
 
 # Convert to list
-data = reviews_datasets.Body.values.tolist()
+data = reviews_datasets.title.values.tolist()
 
 # Remove new line characters
 data = [re.sub(r'\s+', ' ', sent) for sent in data]
@@ -182,7 +182,7 @@ os.environ['MALLET_HOME'] = 'F:\\mallet-2.0.8'
 
 mallet_path = 'F:\\mallet-2.0.8\\bin\\mallet'
 #ldamallet_test = gensim.models.wrappers.LdaMallet(mallet_path, corpus=corpus, num_topics=20, id2word=dictionary_test)
-lda_mallet = gensim.models.wrappers.LdaMallet(mallet_path, corpus=corpus, num_topics=28, id2word=id2word, optimize_interval=10, iterations=1000)
+lda_mallet = gensim.models.wrappers.LdaMallet(mallet_path, corpus=corpus, num_topics=30, id2word=id2word, optimize_interval=10, iterations=1000)
 
 # Compute Coherence Score
 coherence_model_ldamallet = CoherenceModel(model=lda_mallet, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
