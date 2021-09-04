@@ -172,10 +172,9 @@ Tag set T contains 2 tags
 StackOverflow contains 3794 questions with tags in T
 
 
-===================================================================================================
-@@ We select tags set where significance and relevance values corresponding .01 and 0.010 
-===================================================================================================
-Significance: 0.01 Relivance: 0.010
-{"ansible","azure-devops","devops","jenkins","terraform","chef","continuous-integration","ibm-cloud","jenkins-pipeline","gitlab-ci","puppet","pipeline","azure-pipelines","continuous-deployment","devops-services",}
-Tag set T contains 15 tags
-StackOverflow contains 126853 questions with tags in T
+
+========= We extract devops questions post using below tags ==================
+Significance: 0.008 Relivance: 0.010
+{"ansible","azure-devops","devops","jenkins","kubernetes","terraform","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","gitlab-ci","puppet","amazon-cloudformation","pipeline","azure-pipelines","jenkins-plugins","continuous-deployment","devops-services",}
+Tag set T contains 19 tags
+StackOverflow contains 174693 questions with tags in T
