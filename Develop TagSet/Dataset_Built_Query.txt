@@ -18,14 +18,17 @@ Declare @T_variable table([Id] varchar(20)
       ,[Score] varchar(20)
       ,[Tags] varchar(max)
       ,[Title] varchar(max)
-      ,[ViewCount] varchar(20)) 
+      ,[ViewCount] varchar(20)
+	  ,[AcceptedAnsCount] varchar(10)
+	  ,[answerdelay] varchar(20))
 --DECLARE @tcount VARCHAR(128); 
 
 -- declare cursor
 
 DECLARE cursor_tags_count CURSOR FOR
-SELECT tagsname as tags
-  FROM final_tag$;
+SELECT  tagsname as tags
+  FROM final_tag$ where tagsname in 
+  ('ansible','azure-devops','devops','jenkins','kubernetes','terraform','chef','continuous-integration','ibm-cloud','gitlab','jenkins-pipeline','gitlab-ci','puppet','amazon-cloudformation','pipeline','azure-pipelines','jenkins-plugins','continuous-deployment','devops-services')
 
 -- open cursor
 OPEN cursor_tags_count;
@@ -35,20 +38,28 @@ FETCH NEXT FROM cursor_tags_count INTO @tags;
 ------------
 WHILE @@FETCH_STATUS = 0
                 BEGIN
-   insert into @T_variable
-                SELECT 
-				Id
-	  ,AnswerCount
-      ,Body
-      ,CommentCount 
-      ,CreationDate 
-      ,FavoriteCount 
-      ,PostTypeId 
-      ,Score 
-      ,Tags 
-      ,Title
-      ,ViewCount
-                    FROM posts where tags like '%<'+@tags+'>%'     
+   insert into @T_variable              					
+					select p.id,
+					p.answercount
+					,p.body
+					,p.commentcount
+					,p.CreationDate 
+      ,p.FavoriteCount 
+      ,p.PostTypeId 
+      ,p.Score 
+      ,p.Tags 
+      ,p.Title
+      ,p.ViewCount
+,case
+when p.acceptedanswerid is not null
+then 1
+else 0
+end as acceptedanscount
+,DATEDIFF(hour,p.creationdate,s.creationdate) as answerdelay
+from
+(select * from posts where posttypeid=1 and tags like '%<'+@tags+'>%'  )p
+left join (select id,creationdate,acceptedanswerid,lastactivitydate from posts where posttypeid=2 and id in (select AcceptedAnswerId from posts where AcceptedAnswerId<>0 and PostTypeId=1 and Tags like '%<'+@tags+'>%') ) s
+on p.acceptedanswerid=s.id
     FETCH NEXT FROM cursor_tags_count INTO @tags;
                 END;
 
