@@ -12,13 +12,13 @@ years from August 2008 to June 2020.
 
 ## Folder With Details
 In this replication package, we include all the data, codes that we used in this study. <br/>
-Folder “Develop TagSet” contains
-1.	Tag selection and tag set construction queries -/Develop/TagSet/queries.txt
-2.	Candidate tags, significance & relevance with tags - -/Develop/TagSet/Develop_Devops_dataset_Tag.xlsx
-3.	DevOps tag sets with significance & relevance - -/Develop/TagSet/Devops_Tag_sets.txt
-4.	DevOps post extract query - -/Develop/TagSet/Dataset_Built_Query.txt  <br/>
-Folder Dataset contain Stack overflow and DevOps data download link.
-Folder “Topic_modeling_Code” contain develop topic, topic popularity, difficulty (devops_topic_modeling.py) and coherence score calculation (Topics_Ranking_Graph.py) code.  <br/>
-Folder “DevOpsTopic” contain DevOps topic, category, sub-category (evOps Topic Category and Sub-Category.xlsx) and Coherence score under this folder (DevOpsTopic/CoherenceScore)  <br/>
+1. Folder “Develop TagSet” contains
+i.	Tag selection and tag set construction queries -/Develop/TagSet/queries.txt
+ii.	Candidate tags, significance & relevance with tags - -/Develop/TagSet/Develop_Devops_dataset_Tag.xlsx
+iii.	DevOps tag sets with significance & relevance - -/Develop/TagSet/Devops_Tag_sets.txt
+iv.	DevOps post extract query - -/Develop/TagSet/Dataset_Built_Query.txt  <br/>
+2. Folder Dataset contain Stack overflow and DevOps data download link.
+3. Folder “Topic_modeling_Code” contain develop topic, topic popularity, difficulty (devops_topic_modeling.py) and coherence score calculation (Topics_Ranking_Graph.py) code.  <br/>
+4. Folder “DevOpsTopic” contain DevOps topic, category, sub-category (evOps Topic Category and Sub-Category.xlsx) and Coherence score under this folder (DevOpsTopic/CoherenceScore)  <br/>
 
  
