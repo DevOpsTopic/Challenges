@@ -287,7 +287,7 @@ df_topic_sents_keywords = format_topics_sentences(ldamodel=lda_mallet, corpus=co
 # Format
 df_dominant_topic = df_topic_sents_keywords.reset_index()
 df_dominant_topic.columns = ['Document_No', 'Dominant_Topic', 'Topic_Perc_Contrib', 'Keywords', 'texts', 'title']
-df_dominant_topic.to_csv("F:\\Project\\final_topics_include_postbody.csv")
+df_dominant_topic.to_csv("F:\\Project\\final_topics_include_postbodyandTitle.csv")
 
 #df_dominant_topic.groupby('Keywords')['Text'].sum()
 # Show
