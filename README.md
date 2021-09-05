@@ -16,9 +16,9 @@ Folder “Develop TagSet” contains
 1.	Tag selection and tag set construction queries -/Develop/TagSet/queries.txt
 2.	Candidate tags, significance & relevance with tags - -/Develop/TagSet/Develop_Devops_dataset_Tag.xlsx
 3.	DevOps tag sets with significance & relevance - -/Develop/TagSet/Devops_Tag_sets.txt
-4.	DevOps post extract query - -/Develop/TagSet/Dataset_Built_Query.txt
+4.	DevOps post extract query - -/Develop/TagSet/Dataset_Built_Query.txt  <br/>
 Folder Dataset contain Stack overflow and DevOps data download link.
-Folder “Topic_modeling_Code” contain develop topic, topic popularity, difficulty (devops_topic_modeling.py) and coherence score calculation (Topics_Ranking_Graph.py) code.
-Folder “DevOpsTopic” contain DevOps topic, category, sub-category (evOps Topic Category and Sub-Category.xlsx) and Coherence score under this folder (DevOpsTopic/CoherenceScore)
+Folder “Topic_modeling_Code” contain develop topic, topic popularity, difficulty (devops_topic_modeling.py) and coherence score calculation (Topics_Ranking_Graph.py) code.  <br/>
+Folder “DevOpsTopic” contain DevOps topic, category, sub-category (evOps Topic Category and Sub-Category.xlsx) and Coherence score under this folder (DevOpsTopic/CoherenceScore)  <br/>
 
  
