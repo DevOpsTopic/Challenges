@@ -11,7 +11,8 @@ We download Stack Overflow June 2020 data dump for this study. Then we extracted
 years from August 2008 to June 2020. 
 
 ## Folder With Details
-In this replication package, we include all the data, codes that we used in this study. Folder “Develop TagSet” contains
+In this replication package, we include all the data, codes that we used in this study. <br/>
+Folder “Develop TagSet” contains
 1.	Tag selection and tag set construction queries -/Develop/TagSet/queries.txt
 2.	Candidate tags, significance & relevance with tags - -/Develop/TagSet/Develop_Devops_dataset_Tag.xlsx
 3.	DevOps tag sets with significance & relevance - -/Develop/TagSet/Devops_Tag_sets.txt
