@@ -7,8 +7,7 @@ DevOps tools. Therefore, it is important to learn the challenges DevOps develope
 
 
 ## Benchmark Dataset
-We download Stack Overflow June 2020 data dump for this study. Then we extracted DevOps related posts using our tag list. The final list of 19 devops tags that we used to collect our devops posts from Stack Overflow. Devops tags are ("ansible","azure-devops","devops","jenkins","kubernetes","terraform","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","gitlab-ci","puppet","amazon-cloudformation","pipeline","azure-pipelines","jenkins-plugins","continuous-deployment","devops-services"). Our dataset includes 49,139,907 questions and answers posted over the last 13
-years from August 2008 to June 2020. 
+We download Stack Overflow June 2020 data dump for this study. Then we extracted DevOps related posts using our tag list. The final list of 19 devops tags that we used to collect our devops posts from Stack Overflow. Devops tags are ("ansible","azure-devops","devops","jenkins","kubernetes","terraform","chef","continuous-integration","ibm-cloud","gitlab","jenkins-pipeline","gitlab-ci","puppet","amazon-cloudformation","pipeline","azure-pipelines","jenkins-plugins","continuous-deployment","devops-services"). 
 
 ## Folder With Details
 In this replication package, we include all the data, codes that we used in this study. <br/>
