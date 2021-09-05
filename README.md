@@ -16,7 +16,8 @@ In this replication package, we include all the data, codes that we used in this
 i.	Tag selection and tag set construction queries -/Develop/TagSet/queries.txt
 ii.	Candidate tags, significance & relevance with tags - -/Develop/TagSet/Develop_Devops_dataset_Tag.xlsx
 iii.	DevOps tag sets with significance & relevance - -/Develop/TagSet/Devops_Tag_sets.txt
-iv.	DevOps post extract query - -/Develop/TagSet/Dataset_Built_Query.txt  <br/>
+iv.	DevOps post extract query - -/Develop/TagSet/Dataset_Built_Query.txt  
+v. Category and topic evolution query - TopicsEvolve.sql & categoriesevolve.sql<br/>
 2. Folder Dataset contain Stack overflow and DevOps data download link.
 3. Folder “Topic_modeling_Code” contain develop topic, topic popularity, difficulty (devops_topic_modeling.py) and coherence score calculation (Topics_Ranking_Graph.py) code.  <br/>
 4. Folder “DevOpsTopic” contain DevOps topic, category, sub-category (evOps Topic Category and Sub-Category.xlsx) and Coherence score under this folder (DevOpsTopic/CoherenceScore)  <br/>
