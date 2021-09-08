@@ -182,7 +182,7 @@ os.environ['MALLET_HOME'] = 'F:\\mallet-2.0.8'
 
 mallet_path = 'F:\\mallet-2.0.8\\bin\\mallet'
 #ldamallet_test = gensim.models.wrappers.LdaMallet(mallet_path, corpus=corpus, num_topics=20, id2word=dictionary_test)
-lda_mallet = gensim.models.wrappers.LdaMallet(mallet_path, corpus=corpus, num_topics=30, id2word=id2word, optimize_interval=10, iterations=1000)
+lda_mallet = gensim.models.wrappers.LdaMallet(mallet_path, corpus=corpus, num_topics=30, id2word=id2word, optimize_interval=10, alpha=5, iterations=1000)
 
 # Compute Coherence Score
 coherence_model_ldamallet = CoherenceModel(model=lda_mallet, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
