@@ -173,7 +173,7 @@ mallet_path = 'D:\\mallet\\mallet-2.0.8\\bin\\mallet'
 
 iteration_item=[100,500,1000,1500]
 num_topic=[5,10,15,20,25,30,35,40,45,50]
-alpha_value=[.05,.1,.5,1,5,10,50]
+alpha_value=[.05,0.1,0.5,1,5,10,50]
 
 model_results = {'Iteration': [],
                  'Topics': [],
@@ -191,12 +191,12 @@ for iteration in iteration_item:
             coherence_model_ldamallet = CoherenceModel(model=lda_mallet, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
             coherence_ldamallet = coherence_model_ldamallet.get_coherence()
             
-                       model_results['Iteration'].append(iteration)
+            model_results['Iteration'].append(iteration)
             model_results['Topics'].append(topic)
             model_results['Alpha'].append(alpha)
             model_results['Beta'].append('0.01')
             model_results['Coherence'].append(coherence_ldamallet)
-            print ("Topic:",topic, "Alha:", alpha, "Coherence:",coherence_ldamallet)
+            #print ("Topic:",topic, "Alha:", alpha, "Coherence:",coherence_ldamallet)
                 
           
         
