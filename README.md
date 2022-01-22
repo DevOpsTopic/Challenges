@@ -21,6 +21,6 @@ v. Category and topic evolution query - TopicsEvolve.sql & categoriesevolve.sql<
 3. Folder “Topic_modeling_Code” contain develop topic, topic popularity, difficulty (devops_topic_modeling.py) and coherence score calculation (Topics_Ranking_Graph.py) code.  <br/>
 4. Folder “DevOpsTopic” contain DevOps topic, category, sub-category (evOps Topic Category and Sub-Category.xlsx), topic difficulty popularity, bubble chart, topic evoluation and Coherence score under this folder (DevOpsTopic/CoherenceScore)  <br/>
 5. Folder "DevOpsSurvey" contain survey link and devops survey data 
-6. Folder "DevOpsPhases" contain manually levelling devops phases  
+
 
  
